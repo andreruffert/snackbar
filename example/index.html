@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>🍫</title>
+  <style>
+  html {
+    font-family: sans-serif;
+  }
+  </style>
+  <link rel="stylesheet" href="../dist/snackbar.css">
+</head>
+<body>
+  <script src="../dist/snackbar.min.js"></script>
+  <script>
+    window.onload = () => {
+      setTimeout(function() {
+        snackbar.show('Ohai!');
+        snackbar.show('Hello hi!');
+        snackbar.show('I\'m the last one in the queue!');
+      }, 1000);
+    };
+  </script>
+</body>
+</html>
