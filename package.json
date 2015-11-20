@@ -1,9 +1,10 @@
 {
   "name": "snackbar",
   "version": "1.0.0-alpha.1",
-  "description": "undefined",
+  "description": "Lightweight feedback notifications",
   "author": "André Ruffert",
   "license": "MIT",
+  "repository": "andreruffert/snackbar",
   "main": "src/index.js",
   "scripts": {
     "browserify": "browserify src/index.js > dist/$npm_package_name.js --standalone $npm_package_name",
