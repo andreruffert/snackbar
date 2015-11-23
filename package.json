@@ -5,7 +5,7 @@
   "author": "André Ruffert",
   "license": "MIT",
   "repository": "andreruffert/snackbar",
-  "main": "src/index.js",
+  "main": "dist/snackbar.js",
   "scripts": {
     "browserify": "browserify src/index.js > dist/$npm_package_name.js --standalone $npm_package_name",
     "uglify": "uglifyjs dist/$npm_package_name.js -o dist/$npm_package_name.min.js",
