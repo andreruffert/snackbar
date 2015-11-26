@@ -9,10 +9,12 @@
   "scripts": {
     "browserify": "browserify src/index.js > dist/$npm_package_name.js --standalone $npm_package_name",
     "uglify": "uglifyjs dist/$npm_package_name.js -o dist/$npm_package_name.min.js",
-    "prepublish": "babel src --out-dir lib",
-    "build:css": "cat src/$npm_package_name.css > dist/$npm_package_name.css",
+    "sass": "node-sass --output-style expanded src/$npm_package_name.scss | autoprefixer-cli > dist/$npm_package_name.css",
+    "cleancss": "cleancss dist/$npm_package_name.css > dist/$npm_package_name.min.css",
+    "build:css": "npm-run-all sass cleancss",
     "build:js": "npm-run-all browserify uglify",
-    "build": "mkdirp dist && npm-run-all build:*"
+    "build": "mkdirp dist && npm-run-all build:*",
+    "prepublish": "babel src --out-dir lib"
   },
   "babel": {
     "presets": [
@@ -32,11 +34,14 @@
     ]
   },
   "devDependencies": {
+    "autoprefixer-cli": "^1.0.0",
     "babel-cli": "^6.2.0",
     "babel-preset-es2015": "^6.1.18",
     "babelify": "^7.2.0",
     "browserify": "^12.0.1",
+    "clean-css": "^3.4.8",
     "mkdirp": "^0.5.1",
+    "node-sass": "^3.4.2",
     "npm-run-all": "^1.3.1"
   }
 }
