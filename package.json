@@ -6,6 +6,11 @@
   "license": "MIT",
   "repository": "andreruffert/snackbar",
   "main": "lib/index.js",
+  "files": [
+    "dist",
+    "lib",
+    "src"
+  ],
   "scripts": {
     "browserify": "browserify src/index.js > dist/$npm_package_name.js --standalone $npm_package_name",
     "uglify": "uglifyjs dist/$npm_package_name.js -o dist/$npm_package_name.min.js",
