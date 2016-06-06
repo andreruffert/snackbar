@@ -13,8 +13,7 @@ function sayHello() {
   snackbar.show(helloHi());
 }
 
-document.onreadystatechange = function () {
-  console.log(document.readyState);
+document.onreadystatechange = () => {
   if (document.readyState === 'complete') {
     init();
   }
