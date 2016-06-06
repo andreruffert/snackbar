@@ -27,7 +27,8 @@
     ]
   },
   "dependencies": {
-    "snackbar": "^1.0.0-alpha.3"
+    "snackbar": "^1.0.0-alpha.3",
+    "unique-random-array": "^1.0.0"
   },
   "devDependencies": {
     "autoprefixer-cli": "^1.0.0",
