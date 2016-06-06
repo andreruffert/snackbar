@@ -9,6 +9,7 @@
     "start": "npm run watch"
     "clean": "rimraf $npm_package_config_assetPath && mkdirp $npm_package_config_assetPath",
     "watch": "chokidar 'src/**' -c 'npm run build'",
+    "build:css": "node-sass src/stylesheets/index.scss --include-path node_modules | autoprefixer-cli | cleancss > $npm_package_config_assetPath/bundle.min.css",
     "build": "npm-run-all clean build:*",
   },
   "browserify": {
