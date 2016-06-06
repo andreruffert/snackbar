@@ -10,13 +10,15 @@ $ npm install --save snackbar
 
 ## Usage
 
-Import the snackbar.scss source file into your project.
+1. First of all make sure to import the [snackbar.scss](https://github.com/andreruffert/snackbar/blob/master/src/snackbar.scss) file into your project.
 
+2. Use the snackbar.js API
 ```js
 const snackbar = require('snackbar');
 
 snackbar.show('Ohai!');
 ```
+
 
 ## API
 
