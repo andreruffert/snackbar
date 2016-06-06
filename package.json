@@ -2,7 +2,7 @@
   "name": "snackbar",
   "version": "1.0.0-alpha.3",
   "description": "Lightweight feedback notifications",
-  "author": "André Ruffert",
+  "author": "André Ruffert <andreruffert.com>",
   "license": "MIT",
   "repository": "andreruffert/snackbar",
   "main": "lib/index.js",
