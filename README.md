@@ -10,6 +10,8 @@ $ npm install --save snackbar
 
 ## Usage
 
+Import the snackbar.scss source file into your project.
+
 ```js
 const snackbar = require('snackbar');
 
