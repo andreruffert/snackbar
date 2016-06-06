@@ -38,6 +38,12 @@
       ]
     ]
   },
+  "keywords": [
+    "notification",
+    "ui",
+    "notify",
+    "feedback"
+  ],
   "devDependencies": {
     "autoprefixer-cli": "^1.0.0",
     "babel-cli": "^6.2.0",
