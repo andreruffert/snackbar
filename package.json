@@ -1,6 +1,6 @@
 {
   "name": "snackbar",
-  "version": "1.0.0-alpha.3",
+  "version": "1.0.0",
   "description": "Lightweight feedback notifications",
   "author": "André Ruffert <andreruffert.com>",
   "license": "MIT",
