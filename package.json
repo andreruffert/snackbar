@@ -9,8 +9,10 @@
     "start": "npm run watch"
     "clean": "rimraf $npm_package_config_assetPath && mkdirp $npm_package_config_assetPath",
     "watch": "chokidar 'src/**' -c 'npm run build'",
+    "serve": "live-server . --watch=$npm_package_config_assetPath --port=8080 --quiet",
     "build:css": "node-sass src/stylesheets/index.scss --include-path node_modules | autoprefixer-cli | cleancss > $npm_package_config_assetPath/bundle.min.css",
     "build": "npm-run-all clean build:*",
+    "start": "npm-run-all build --parallel serve watch"
   },
   "browserify": {
     "transform": [
@@ -34,6 +36,7 @@
     "browserify": "^12.0.1",
     "chokidar-cli": "^1.2.0",
     "clean-css": "^3.4.8",
+    "live-server": "^1.0.0",
     "mkdirp": "^0.5.1",
     "node-sass": "^3.4.2",
     "npm-run-all": "^1.3.2",
