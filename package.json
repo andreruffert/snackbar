@@ -3,13 +3,10 @@
     "assetPath": "assets"
   },
   "scripts": {
-    "build:js": "browserify src/javascripts/index.js | uglifyjs > assets/bundle.js",
-    "build:css": "node-sass src/stylesheets/index.scss | autoprefixer-cli | cleancss > assets/bundle.css",
-    "build": "mkdirp assets && npm-run-all build:*",
-    "start": "npm run watch"
     "clean": "rimraf $npm_package_config_assetPath && mkdirp $npm_package_config_assetPath",
     "watch": "chokidar 'src/**' -c 'npm run build'",
     "serve": "live-server . --watch=$npm_package_config_assetPath --port=8080 --quiet",
+    "build:js": "browserify src/javascripts/index.js | uglifyjs > $npm_package_config_assetPath/bundle.min.js",
     "build:css": "node-sass src/stylesheets/index.scss --include-path node_modules | autoprefixer-cli | cleancss > $npm_package_config_assetPath/bundle.min.css",
     "build": "npm-run-all clean build:*",
     "start": "npm-run-all build --parallel serve watch"
