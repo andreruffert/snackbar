@@ -7,6 +7,8 @@ function init() {
     snackbar.show('Ohai!');
     snackbar.show(`Happy ${days[new Date().getDay()]}.`);
   }, 1000);
+
+  document.querySelector('[data-js-trigger="snackbar"]').addEventListener('click', sayHello);
 }
 
 function sayHello() {
@@ -18,5 +20,3 @@ document.onreadystatechange = () => {
     init();
   }
 }
-
-document.querySelector('[data-js-trigger="snackbar"]').addEventListener('click', sayHello);
