@@ -15,9 +15,10 @@
   transition: visibility 0.3s, transform 0.3s;
   transform: translateY(100px);
   visibility: hidden;
+  will-change: transform;
 }
 
 .snackbar--visible {
   visibility: visible;
-  transform: translateY(0px);
+  transform: none;
 }
