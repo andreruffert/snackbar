@@ -1,5 +1,7 @@
 # snackbar
 
+[![npm version](https://img.shields.io/npm/v/snackbar.svg)](https://www.npmjs.com/package/snackbar)
+
 > Lightweight feedback notifications
 
 ## Install
