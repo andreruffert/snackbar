@@ -7,7 +7,7 @@ var _snackbar2 = _interopRequireDefault(_snackbar);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var instance = undefined;
+var instance = void 0;
 
 function snackbar() {
   if (!instance) {
@@ -21,15 +21,15 @@ module.exports = snackbar();
 },{"./snackbar":2}],2:[function(require,module,exports){
 'use strict';
 
-var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var Snackbar = (function () {
+var Snackbar = function () {
   function Snackbar() {
     _classCallCheck(this, Snackbar);
 
@@ -37,6 +37,8 @@ var Snackbar = (function () {
     this.view.classList.add('snackbar');
     this.isActive = false;
     this.queue = [];
+    this.gap = 250;
+    this.duration = 5000;
   }
 
   _createClass(Snackbar, [{
@@ -54,7 +56,7 @@ var Snackbar = (function () {
       this.queue.shift();
       setTimeout(function () {
         return _this.hide();
-      }, 5000);
+      }, this.duration);
     }
   }, {
     key: 'hide',
@@ -67,13 +69,13 @@ var Snackbar = (function () {
       if (this.queue.length) {
         setTimeout(function () {
           return _this2.show(_this2.queue[0]);
-        }, 250);
+        }, this.gap);
       }
     }
   }]);
 
   return Snackbar;
-})();
+}();
 
 exports.default = Snackbar;
 

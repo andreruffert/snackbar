@@ -4,6 +4,8 @@ class Snackbar {
     this.view.classList.add('snackbar');
     this.isActive = false;
     this.queue = [];
+    this.gap = 250;
+    this.duration = 5000;
   }
 
   show(message) {
@@ -15,7 +17,7 @@ class Snackbar {
     this.view.textContent = message;
     this.view.classList.add('snackbar--visible');
     this.queue.shift();
-    setTimeout(() => this.hide(), 5000);
+    setTimeout(() => this.hide(), this.duration);
   }
 
   hide() {
@@ -23,7 +25,7 @@ class Snackbar {
     this.view.classList.remove('snackbar--visible');
 
     if (this.queue.length) {
-      setTimeout(() => this.show(this.queue[0]), 250);
+      setTimeout(() => this.show(this.queue[0]), this.gap);
     }
   }
 }

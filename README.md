@@ -30,6 +30,18 @@ snackbar.show('Ohai!');
 
 Type `string`
 
+### snackbar.duration
+
+Time to show snackbar before hiding (default 5000)
+
+Type `number`
+
+### snackbar.gap
+
+Time between sequential snackbars (default 250)
+
+Type `number`
+
 ## License
 
 MIT © [André Ruffert](http://andreruffert.com)
