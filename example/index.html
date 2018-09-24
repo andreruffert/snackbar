@@ -15,8 +15,15 @@
   <script src="../dist/snackbar.min.js"></script>
   <script>
     window.onload = () => {
+      // Optional configuration
+      snackbar.duration = 5000;
+      snackbar.gap = 250;
+
+      // Show a snackbar
+      snackbar.show('Ohai!');
+
+      // Add messages to the queue
       setTimeout(function() {
-        snackbar.show('Ohai!');
         snackbar.show('Hello hi!');
         snackbar.show('I\'m the last one in the queue!');
       }, 1000);
